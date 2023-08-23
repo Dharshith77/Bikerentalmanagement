@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<link rel="stylesheet" href="/static/styles/adminstyle5.css">
+</head>
+<body>
+<header >
+<h1>MG BIKES</h1>
+</header>
+ <div class="container">
+    <form method="POST" >
+	<span class="login100-form-title">
+		Login
+	</span>
+	<br>
+    <div>
+        <input type="email"  name="email" placeholder="Enter Email Address" required>
+    </div>
+	<br>
+    <div>
+        <input type="password"  name="password" placeholder="Enter Password" required>
+    </div>
+	<br>
+    <div class="radio-buttons" id="radio-buttons">
+	<input type="radio" id="admin" name="rad" value="admin">
+	<label for="admin">Admin</label><br>
+	<input type="radio" id="user" name="rad" value="user">
+	<label for="user">User</label><br>
+     </div>
+	<br>
+    <input type="submit" name="Login">
+    <p style="text-align:center">New User?<br>Create Account: <a style="color:crimson;" href="/register">Register</a></p>
+    </form>
+    </div>
+</body>
+</html>

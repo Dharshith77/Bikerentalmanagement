@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikes Information</title>
+    <link rel="stylesheet" href="/static/styles/adminstyle5.css">
+</head>
+<body>
+<header>
+    <h1>MG BIKES</h1>
+</header>
+<div class="bike-table">
+    <table class="list">
+        <thead>
+        <tr>
+            <th style="color:black;">Bike Image</th>
+            <th style="color: black;">Bike Name</th>
+            <th style="color: black;">Brand</th>
+            <th style="color: black;">Year</th>
+            <th style="color: black;">Price</th>
+            <th style="color: black;">Description</th>
+            <th style="color: black;">Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for booked_bike in booked_bikes %}
+        <tr>
+           <td><img src="data:image/jpeg;base64,{{ booked_bike.encoded_image }}" class="bike-image"></td>
+            <td>{{ booked_bike.bikename }}</td>
+            <td>{{ booked_bike.brand }}</td>
+            <td>{{ booked_bike.year }}</td>
+            <td>{{ booked_bike.price }}</td>
+            <td>{{ booked_bike.description }}</td>
+            <td>BOOKED</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <input onclick="history.back()" type="button" value="BACK">
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update Bike</title>
+<link rel="stylesheet" href="/static/styles/adminstyle5.css">
+</head>
+<body>
+<header >
+<h1>MG BIKES</h1>
+</header>
+<div class="container">
+	<div class="content">
+<form method="post" action="{{ url_for('update_bike', bikename=bike.bikename) }}" onsubmit=" alert('Bike Successfully Updated!')"  >
+	<h3><span>Update Bike Information</span></h3>
+		<br>
+		<input type="text" id="bikename" name="bikename"  placeholder="Enter Bike Name" ><br>
+
+		<input type="text" id="brand" name="brand"  placeholder="Enter Brand Name" ><br>
+
+		<input type="number" id="year" name="year"  placeholder="Enter Year" ><br>
+
+		<input type="number" id="price" name="price"  placeholder="Enter Price" ><br>
+
+		<textarea id="description" name="description"  placeholder="Enter Description" ></textarea><br>
+		<input type="file" id="bikeImage" name="bikeImage" accept="image/*" required><br>
+		<input onclick="window.open('bikeinfo','_self');" type="button" value="Bikes Available">
+    	<input type="submit" value="Update">
+		<input onclick='history.go(-1)' type="button" value="BACK">
+</form>
+
+	</div>
+</div>
+
+
+</body>
+</html>

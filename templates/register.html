@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+<link rel="stylesheet" href="/static/styles/adminstyle5.css">
+</head>
+<body>
+<header >
+<h1>MG BIKES</h1>
+</header>
+<div class="container">
+	<div class="content">
+<form  action="/register" method="post" onsubmit=" alert('Successfully Registered')" >
+    <span class="login100-form-title">
+		REGISTER
+	</span>
+    <br>
+        <input type="text" id="fullname" name="fullname" placeholder="FullName" required>
+        <br>
+        <input type="email" name="email"  placeholder="Enter Email Address"required>
+        <br>
+        <input type="text" name="phonenum" placeholder="Phonenum" required>
+        <br>
+        <input type="password" name="password" id="password" placeholder="Enter password" required>
+        <br>
+        <input type="password" id="confirmpass" placeholder="Confirm Password" required >
+        <br>
+         <p style="color:red" id="message"></p>
+    <div class="button-container">
+        <input type="submit" id="submit"  value="Register" >
+        <input style="cursor:pointer;" type="reset" value="clear">
+    </div>
+        <br>
+     <p style="text-align:center">Already Registered?<br><a style="color:crimson;"href="/login">login</a></p>
+</form>
+</div>
+    </div>
+ <script src="/static/styles/confirmpass.js"></script>
+</body>
+</html>

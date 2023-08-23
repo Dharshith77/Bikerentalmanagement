@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+header {
+			background-color: red;
+			color: #fff;
+			padding: 4px;
+	}
+
+body{
+
+            background-image: url('/static/images/homepage.jpg');
+            background-attachment: fixed; /* Create the parallax effect */
+            background-position: center;
+            background-size: cover;
+      }
+
+ form{
+            margin-top:1em;
+            margin-left:center;
+
+        }
+
+
+h1 {
+	margin: 0;
+	font-size: 40px;
+    }
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+
+
+
+/*------------------------input-----------*/
+
+textarea{
+        font-size: medium;
+    display: block;
+
+}
+
+input{
+display:block;
+padding:9px;
+border-radius:5px;
+}
+
+input[type="submit"], input[type="button"] {
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: crimson;
+  color: #ffffff;
+  margin: auto;
+  display: inline-block;
+  margin: 5px;
+}
+
+.label-input100 {
+  font-family: Poppins-Regular;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+  padding-left: 7px;
+}
+
+.login100-form-title {
+  display: block;
+  font-size: 39px;
+  color: crimson;
+  text-align: center;
+text-transform:uppercase;
+}
+
+.radio-buttons{
+  display: flex;
+  color:crimson;
+}
+
+
+.radio-buttons label{
+
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+/*------------------------homepage-----------*/
+
+.nav-ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+	}
+
+.nav-li {
+			display: inline-block;
+			margin-right: 15px;
+	}
+
+
+.nav-a {
+			color:white;
+			text-decoration: none;
+			padding: 2px 8px;
+	}
+
+.nav-a:hover {
+			background-color: #fff;
+			color: white;
+	       }
+
+
+.section-style{
+			padding: 43px;
+	}
+
+footer {		 position: fixed;
+   			bottom: 0;
+   			width: 100%;
+			color: white;
+			padding: 0px;
+			text-align: center;
+	}
+
+
+p {
+
+    color:white;;
+    font-size: 16px;
+    }
+
+
+
+.container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+}
+
+.container .content{
+   text-align: center;
+}
+
+.container .content h3{
+   font-size: 30px;
+   color:#333;
+}
+
+.container .content h3 span{
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   padding:0 15px;
+}
+
+.container .content h1{
+   font-size: 50px;
+   color:#333;
+}
+
+.container .content h1 span{
+   color:crimson;
+}
+
+.container .content p{
+   font-size: 15px;
+   margin-bottom: 20px;
+}
+
+.container .content .btn{
+   display: inline-block;
+   padding:10px 30px;
+   font-size: 20px;
+   background: #333;
+   color:#fff;
+   margin:0 5px;
+   text-transform: capitalize;
+}
+
+.container .content .btn:hover{
+   background: crimson;
+}
+
+.form-container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+   background: #eee;
+}
+
+.form-container form{
+   padding:20px;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+   background: #fff;
+   text-align: center;
+   width: 500px;
+}
+
+.form-container form h3{
+   font-size: 30px;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   color:#333;
+}
+
+.form-container form input,
+.form-container form select{
+   width: 100%;
+   padding:10px 15px;
+   font-size: 17px;
+   margin:8px 0;
+   background: #eee;
+   border-radius: 5px;
+}
+
+.form-container form select option{
+   background: #fff;
+}
+
+.form-container form .form-btn{
+   background: #fbd0d9;
+   color:crimson;
+   text-transform: capitalize;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.form-container form .form-btn:hover{
+   background: crimson;
+   color:#fff;
+}
+
+.form-container form p{
+   margin-top: 10px;
+   font-size: 20px;
+   color:#333;
+}
+
+.form-container form p a{
+   color:crimson;
+}
+
+.form-container form .error-msg{
+   margin:10px 0;
+   display: block;
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   font-size: 20px;
+   padding:10px;
+}
+
+
+/*--------------bikeinfoaddbike--------------*/
+
+.bike-table {
+    border-style: solid;
+    /* margin-bottom: 10px; */
+    /* margin-left: 10px; */
+    padding: 20px;
+    /* width: 50%; */
+    margin: auto;
+    width: 70%;
+    /* border: 3px solid green; */
+    /* padding: 10px; */
+}
+
+body > table{
+    width: 80%;
+}
+
+table{
+    border-collapse: collapse;
+}
+table.list{
+    width:100%;
+}
+
+td,th {
+
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
+    font-weight:bold;
+
+}
+tr:nth-child(odd){
+color:white
+}
+.hide{
+    display:none;
+}
+
+
+.bike-image {
+    width: 200px;
+    height: 170px;
+  }
+  .button-container {
+            display: inline-flex;
+            justify-content: space-between; /* Adjust as needed */
+        }

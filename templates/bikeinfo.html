@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikes Information</title>
+    <link rel="stylesheet" href="/static/styles/adminstyle5.css">
+</head>
+<body>
+<header>
+    <h1>MG BIKES</h1>
+</header>
+<div class="bike-table">
+    <table class="list">
+        <thead>
+        <tr>
+            <th style="color:black;">Bike Image</th>
+            <th style="color: black;">Bike Name</th>
+            <th style="color: black;">Brand</th>
+            <th style="color: black;">Year</th>
+            <th style="color: black;">Price</th>
+            <th style="color: black;">Description</th>
+            <th style="color: black;">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for bike in bikes %}
+        <tr>
+            <td ><img src="data:image/jpeg;base64,{{ bike.encoded_image }}"class="bike-image" > </td>
+            <td>{{ bike.bikename }}</td>
+            <td>{{ bike.brand }}</td>
+            <td>{{ bike.year }}</td>
+            <td>{{ bike.price }}</td>
+            <td>{{ bike.description }}</td>
+            <td>
+                <div class="button-container">
+                <a href="{{ url_for('update_bike', bikename=bike.bikename) }}">
+                    <input type="submit" value="Update"</input></a>
+                 <form action="{{ url_for('delete_bike', bikename=bike.bikename) }}" method="post"   >
+                 <input style="background-color: red;" onsubmit=" alert('Bike Deleted Successfully!')" type="submit" value="Delete">
+                </div>
+            </td>
+
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <input onclick="history.back()" type="button" value="BACK">
+</div>
+</body>
+</html>

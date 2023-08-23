@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking</title>
+<link rel="stylesheet" href="/static/styles/adminstyle5.css">
+</head>
+<body>
+
+<header >
+<h1>MG BIKES</h1>
+</header>
+<div class="container">
+	<div class="content">
+         <p>Welcome, {{ current_user.fullname }}! Please choose a bike to book:</p>
+
+    <ul>
+         {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li style="color:white;background:red;">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+        {% for bike in bikes %}
+        <li>
+            <img src="data:image/jpeg;base64,{{ bike.encoded_image }}" width="400" height="300">
+            <h3>{{ bike.bikename }}</h3>
+            <p>Brand: {{ bike.brand }}</p>
+            <p>Year: {{ bike.year }}</p>
+            <p>Price: {{ bike.price }}/- Per day</p>
+            <p>Description: {{ bike.description }}</p>
+
+            <form enctype="multipart/form-data" action="/booking" method='POST' onsubmit=" alert('Bike Successfully Booked')">
+                 <input type="hidden" src="data:image/jpeg;base64,{{ bike.encoded_image }}" name="image_file" class="bike-image" >
+                <input type="hidden" name="bikename" value="{{ bike.bikename }}">
+                <input type="hidden" name="brand" value="{{ bike.brand }}">
+                <input type="hidden" name="year" value="{{ bike.year }}">
+                <input type="hidden" name="price" value="{{ bike.price }}">
+                <input type="hidden" name="description" value="{{ bike.description }}">
+
+                <input type="submit" value="Book">
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+
+     </div>
+</div>
+</body>
+</html>

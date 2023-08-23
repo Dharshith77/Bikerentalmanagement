@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Bike</title>
+<link rel="stylesheet" href="/static/styles/adminstyle5.css">
+</head>
+<body>
+<header >
+<h1>MG BIKES</h1>
+</header>
+<div class="container">
+	<div class="content">
+<form enctype="multipart/form-data" method="post" action="/addbike" onsubmit=" alert('Bike Successfully Added!')"  >
+	<h3><span>Add Bike Information</span></h3>
+		<br>
+		<input type="text" id="bikename" name="bikename"  placeholder="Enter Bike Name" required><br>
+
+		<input type="text" id="brand" name="brand"  placeholder="Enter Brand Name" required ><br>
+
+		<input type="number" id="year" name="year"  placeholder="Enter Year" required><br>
+
+		<input type="number" id="price" name="price"  placeholder="Enter Price" required><br>
+
+		<textarea id="description" name="description"  placeholder="Enter Description" required></textarea><br>
+
+		 <input type="file" id="image_file" name="image_file" accept="image/*"  required><br>
+
+		<input onclick='history.go(-1)' type="button" value="BACK">
+
+		<input type="submit" value="ADD">
+
+		<input onclick="window.open('bikeinfo','_self');" type="button" value="Bikes Available">
+
+</form>
+
+	</div>
+</div>
+
+
+</body>
+</html>
